@@ -126,10 +126,10 @@ Custom data does **not** need to match SEVIR scales and supports arbitrary spati
 
 ## Usage
 
-### Download model
+### Download model and dataset
 
-baidu link: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw password: f6dw
-
+baidu link for mdoel: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw password: f6dw
+baidu link for dsevir_ataset: https://pan.baidu.com/s/1G0p0wLwlvdBwv-f4jw2hbg?pwd=nve3 password: nve3
 ### Mode 1: SEVIR Inference
 
 ```bash
@@ -263,7 +263,8 @@ Development_swinlstm/
 ## 安装与运行
 
 ### 下载模型
-百度网盘链接: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw 提取码: f6dw
+百度网盘模型链接: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw 提取码: f6dw
+数据集链接: https://pan.baidu.com/s/1G0p0wLwlvdBwv-f4jw2hbg?pwd=nve3 提取码: nve3
 
 ### 环境准备
 
