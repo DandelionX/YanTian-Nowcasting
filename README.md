@@ -366,3 +366,4 @@ SEVIR 数据推理脚本，提供可视化输出。
 - 保存 `.npy` 格式结果
 
 **模型训练：刘祺等，中国科学院大气物理研究所（IAP/CAS），RUMLA。**
+![SEVIR 预测结果](./predict_results/vil-2019-SEVIR_VIL_RANDOMEVENTS_2019_0501_0831.h5-0-0.png)
