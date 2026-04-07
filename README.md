@@ -127,7 +127,7 @@ Custom data does **not** need to match SEVIR scales and supports arbitrary spati
 
 ### Download model and dataset
 
-baidu link for mdoel: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw password: f6dw
+baidu link for model: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw password: f6dw
 baidu link for sevir_dataset: https://pan.baidu.com/s/1G0p0wLwlvdBwv-f4jw2hbg?pwd=nve3 password: nve3
 ### Mode 1: SEVIR Inference
 
@@ -196,7 +196,7 @@ General inference script supporting arbitrary input sizes.
 * Automatic postprocessing (restore original resolution)
 * Saves results in `.npy` format
 
-Trained by: Qi Liu et al., Institute of Atmospheric Physics, Chinese Academy of Sciences (IAP/CAS), Research Unit of Machine Learning Application (RUMLA).
+**Trained by: Qi Liu et al., Institute of Atmospheric Physics, Chinese Academy of Sciences (IAP/CAS), Research Unit of Machine Learning Application (RUMLA).**
 
 
 # YanTian 时空序列模型
@@ -307,7 +307,7 @@ python make_sevir_dataset.py
 - **值域范围**: 0~255 (雷达回波反射率)
 - **维度格式**: `(T, H, W)` - 其中 T 为帧数, H, W 为空间分辨率.(以下操作代码会自动处理)
     - 对于 T 少于 13 帧: 前面填充 0；多于 13 帧: 截取最近的 13 帧
-    - 空间维度 : 使用双线性插值缩放缩放到 384×384 
+    - 空间维度 : 使用双线性插值缩放到 384×384 
 
 ---
 
@@ -365,4 +365,4 @@ SEVIR 数据推理脚本，提供可视化输出。
 - 自动后处理 (还原原始尺寸)
 - 保存 `.npy` 格式结果
 
-训练人员：刘祺 等，中国科学院大气物理研究所（IAP/CAS），RUMLA.
+**模型训练：刘祺等，中国科学院大气物理研究所（IAP/CAS），RUMLA.**
