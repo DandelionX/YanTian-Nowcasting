@@ -16,7 +16,6 @@ The framework integrates **ONNX Runtime** for accelerated inference, supporting 
 * [Data Preparation](#data-preparation)
 * [Usage](#usage)
 * [Core File Description](#core-file-description)
-* [References](#references)
 
 ---
 
@@ -197,15 +196,7 @@ General inference script supporting arbitrary input sizes.
 * Automatic postprocessing (restore original resolution)
 * Saves results in `.npy` format
 
----
 
-## References
-
-S. Tang, C. Li, P. Zhang, and R. Tang,
-"SwinLSTM: Improving Spatiotemporal Prediction Accuracy using Swin Transformer and LSTM,"
-Proceedings of the 2023 IEEE/CVF International Conference on Computer Vision (ICCV),
-Paris, France, 2023, pp. 13424–13433.
-doi: 10.1109/ICCV51070.2023.01239.
 
 
 # SwinLSTM 时空序列模型
@@ -224,7 +215,6 @@ doi: 10.1109/ICCV51070.2023.01239.
 - [数据准备](#数据准备)
 - [使用方法](#使用方法)
 - [核心文件说明](#核心文件说明)
-- [参考文献](#参考文献)
 
 ---
 
@@ -374,8 +364,3 @@ SEVIR 数据推理脚本，提供可视化输出。
 - ONNX 推理
 - 自动后处理 (还原原始尺寸)
 - 保存 `.npy` 格式结果
-
----
-
-## 参考文献：
-S. Tang, C. Li, P. Zhang and R. Tang, "SwinLSTM: Improving Spatiotemporal Prediction Accuracy using Swin Transformer and LSTM," 2023 IEEE/CVF International Conference on Computer Vision (ICCV), Paris, France, 2023, pp. 13424-13433, doi: 10.1109/ICCV51070.2023.01239.
