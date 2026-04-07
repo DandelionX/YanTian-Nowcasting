@@ -1,4 +1,4 @@
-# SwinLSTM Spatiotemporal Sequence Model
+# YanTian Spatiotemporal Sequence Model
 
 This project builds a general temporal extrapolation prediction framework, focusing on forecasting future states from continuous frame-based time series data (input: historical multi-frame sequences → output: future multi-frame sequences).
 
@@ -21,17 +21,18 @@ The framework integrates **ONNX Runtime** for accelerated inference, supporting 
 
 ## Project Overview
 
-This project implements a SwinLSTM-based temporal extrapolation framework, mainly applied to precipitation nowcasting. It predicts future 12 frames based on 13 historical frames of precipitation fields.
+This project implements a general temporal extrapolation framework, mainly applied to precipitation nowcasting. It predicts future 12 frames based on 13 historical frames of precipitation fields.
 
 * **Dual-mode support**: Compatible with both the SEVIR benchmark dataset and custom application data
 * SEVIR mode provides visualization of prediction results, while custom mode outputs raw prediction data (NumPy format)
+* The model is based on SwinLSTM (Tang et al., ICCV, 2023)
 
 ---
 
 ## Directory Structure
 
 ```
-Development_swinlstm/
+Development_YanTian_nowcasting/
 ├── predict_results/              # SEVIR prediction visualization images
 │   └── *.png
 ├── predict_results_general/      # General prediction results (NumPy format)
@@ -43,7 +44,6 @@ Development_swinlstm/
 │   ├── test.txt                 # Test set list
 │   └── cascast/                 # Processed data
 │       └── test/                # Test set (.npz files)
-├── swinlstm_model.onnx          # ONNX model file
 ├── make_sevir_dataset.py        # Data preprocessing script
 ├── inference_sevir.py           # SEVIR inference script
 ├── inference_general.py         # General inference script
@@ -59,8 +59,8 @@ Development_swinlstm/
 
 ```bash
 # Create conda environment
-conda create -n swinlstm_test python=3.10
-conda activate swinlstm_test
+conda create -n nowcasting_test python=3.10
+conda activate nowcasting_test
 pip install -r environment.txt
 ```
 
@@ -128,7 +128,7 @@ Custom data does **not** need to match SEVIR scales and supports arbitrary spati
 ### Download model and dataset
 
 baidu link for mdoel: https://pan.baidu.com/s/17XIQebH4TlvpS3H6P0DSUA?pwd=f6dw password: f6dw
-baidu link for dsevir_ataset: https://pan.baidu.com/s/1G0p0wLwlvdBwv-f4jw2hbg?pwd=nve3 password: nve3
+baidu link for sevir_dataset: https://pan.baidu.com/s/1G0p0wLwlvdBwv-f4jw2hbg?pwd=nve3 password: nve3
 ### Mode 1: SEVIR Inference
 
 ```bash
@@ -196,10 +196,10 @@ General inference script supporting arbitrary input sizes.
 * Automatic postprocessing (restore original resolution)
 * Saves results in `.npy` format
 
+Trained by: Qi Liu et al., Institute of Atmospheric Physics, Chinese Academy of Sciences (IAP/CAS), Research Unit of Machine Learning Application (RUMLA).
 
 
-
-# SwinLSTM 时空序列模型
+# YanTian 时空序列模型
 
 构建通用时序外推预测框架，专注解决连续帧时序数据的未来状态推演任务（输入历史多帧序列 → 预测未来多帧序列）。
 
@@ -220,15 +220,16 @@ General inference script supporting arbitrary input sizes.
 
 ## 项目简介
 
-本项目实现了 SwinLSTM 时序外推预测框架，主要用于降水临近预报（Nowcasting），基于历史 13 帧 → 预测未来 12 帧的降水场。
+本项目实现了 YanTian 时序外推预测框架，主要用于降水临近预报（Nowcasting），基于历史 13 帧 → 预测未来 12 帧的降水场。
 - **双模式支持**：支持 SEVIR 标准数据集和自定义业务数据。
 - SEVIR 模式提供预报结果可视化，自定义模式提供原始预报数据保存（Numpy 格式）
+- 模型参考 SwinLSTM (Tang et al., ICCV, 2023)
 
 
 ## 目录结构
 
 ```
-Development_swinlstm/
+Development_YanTian_nowcasting/
 ├── predict_results/              # SEVIR 预测结果可视化图片
 │   └── *.png
 ├── predict_results_general/      # 通用数据预测结果 (Numpy 格式)
@@ -240,7 +241,6 @@ Development_swinlstm/
 │   ├── test.txt                 # 测试集列表
 │   └── cascast/                 # 处理后的数据
 │       └── test/                # 测试集 npz 文件
-├── swinlstm_model.onnx          # ONNX 模型文件
 ├── make_sevir_dataset.py        # 数据预处理脚本
 ├── inference_sevir.py           # SEVIR 数据推理脚本
 ├── inference_general.py         # 通用数据推理脚本
@@ -260,8 +260,8 @@ Development_swinlstm/
 
 ```bash
 # 创建 conda 环境
-conda create -n swinlstm_test python=3.10
-conda activate swinlstm_test
+conda create -n nowcasting_test python=3.10
+conda activate nowcasting_test
 pip install -r environment.txt
 ```
 
@@ -364,3 +364,5 @@ SEVIR 数据推理脚本，提供可视化输出。
 - ONNX 推理
 - 自动后处理 (还原原始尺寸)
 - 保存 `.npy` 格式结果
+
+训练人员：刘祺 等，中国科学院大气物理研究所（IAP/CAS），RUMLA.
